@@ -1,0 +1,18 @@
+.loginCardOuter {
+  max-width: 680px;
+  margin-inline: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginCard {
+  padding: 40px;
+  margin-top: 64px;
+
+}
+
+.formGrid {
+  margin-top: 2rem;
+}

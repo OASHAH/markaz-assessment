@@ -1,3 +1,44 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "next"
+  ],
+  "plugins": ["react", "react-hooks"],
+  "globals": {
+    "__DEV__": "readonly",
+    "VERSION": "readonly"
+  },
+  "ignorePatterns": [".next/**", "**/*.json", "content/**", "cypress/**"],
+  "rules": {
+    "strict": 0,
+    "prefer-const": 1,
+    "quotes": "off",
+    "semi": "off",
+    "no-unused-vars": "warn",
+    "promise/catch-or-return": "warn",
+    "react/display-name": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint", "promise"],
+      "rules": {
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "off"
+      }
+    }
+  ]
 }
